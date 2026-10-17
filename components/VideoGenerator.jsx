@@ -10,7 +10,7 @@ const VOICES = [
   { value: 'en-CA-ClaraNeural',  label: '🇨🇦 Clara — Canadian Female' },
 ];
 
-const TTS_URL = 'http://localhost:5050/generate-video';
+const TTS_URL = process.env.NEXT_PUBLIC_TTS_URL || 'http://localhost:5050/generate-video';
 
 export default function VideoGenerator() {
   const [script, setScript]       = useState('');
